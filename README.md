@@ -5,3 +5,4 @@ TODO:
  * Make Tie respond to mid-low not bass.
  * Make buttons respond.
  * Light up shirt.
+ * Fix Sinewave Monitor.
