@@ -80,7 +80,7 @@
 						'W', 'a', 'l', 'l', 'c', 'l', 'o', 'c', 'k', ' ',
 						'N', 'e', 't', 'w', 'o', 'r', 'k', ' ', ' ', ' ',
 						'A', 'u', 't', 'o', ' ', 'g', 'a', 'i', 'n', ' ',
-						'P', 'e', 'a', 'k', ' ', 'v', 'a', 'l', 'u', 'e',
+						'V', 'e', 'r', 's', 'i', 'o', 'n', ' ', ' ', ' ',
 						'R', 'M', 'S', ' ', 'v', 'a', 'l', 'u', 'e', ' ',
 						'F', 'P', 'S', ' ', 'T', '/', 'A', 'L', ' ', ' ',
 						'P', 'l', 'a', 'y', 'e', 'r', 'I', 'n', 'f', 'o',
@@ -143,7 +143,16 @@
 						value = AudioLinkData( int2( ALPASS_GENERALVU + int2( 11, 0 ) ) ); //Autogain Debug
 						break;
 					case 4:
-						value = AudioLinkData( int2( ALPASS_GENERALVU + int2( 8, 0 ) ) ).y; //Peak
+						if( dig.x < 7 )
+						{
+							xoffset = 6;
+							value = AudioLinkData( int2( ALPASS_GENERALVU + int2( 0, 0 ) ) ).g; //Version Major
+						}
+						else
+						{
+							xoffset = 8;
+							value = AudioLinkData( int2( ALPASS_GENERALVU + int2( 0, 0 ) ) ).r; //Version Minor
+						}
 						break;
 					case 5:
 						value = AudioLinkData( int2( ALPASS_GENERALVU + int2( 8, 0 ) ) ).x; //RMS
@@ -183,10 +192,10 @@
 					case 9:
 					case 10:
 						value = AudioLinkData( int2( ALPASS_GENERALVU + int2(7, 0 ) ) )[dig.y-8];
-						float4 amplitudemon = AudioLinkData( ALPASS_WAVEFORM + int2( iuv.x*128, 0 ) ).x;
+						float4 amplitudemon = AudioLinkData( ALPASS_WAVEFORM + int2( iuv.x*128, 0 ) );
 						float2 uvin = ( iuv.xy*float2(1., 11./3.)-float2( 0., 8./3.) );
-						float r = amplitudemon.x + amplitudemon.a;
-						float l = amplitudemon.x - amplitudemon.a;
+						float r = amplitudemon.r + amplitudemon.a;
+						float l = amplitudemon.r - amplitudemon.a;
 						float comp = uvin.y * 2. - 1.;
 						float ramp = saturate( (.05 - abs( r - comp )) * 40. );
 						float lamp = saturate( (.05 - abs( l - comp )) * 40. );

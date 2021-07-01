@@ -62,7 +62,7 @@
 			fixed4 diffuse = tex2D (_DiffuseTex, IN.uv_FunctionTex);
             fixed4 function = tex2D (_FunctionTex, IN.uv_FunctionTex);
 			fixed4 normal = tex2D (_NormalTex, IN.uv_FunctionTex);
-			
+			fixed4 normnorm = pow( normal, 0.5 );
 			diffuse *= _Color;
 
             o.Metallic = _Metallic;
@@ -80,18 +80,25 @@
 			{
 				//Emissive.
 				o.Emission = diffuse;
+				o.Albedo = diffuse;
+			}
+			else if( function.b > function.r && function.b > function.g && function.b > 0.1 )
+			{
+				float4 ALI = AudioLinkData( ALPASS_CCINTERNAL + int2( 1, 0 ) );
+				o.Emission = AudioLinkCCtoRGB( ALI.x, 1., ALI.y/25. );
+				o.Albedo = diffuse;
 			}
 			else if( function.r > function.g && function.r > 0.5)
 			{
 				// ColorChord, Linear
-				o.Emission = AudioLinkLerp( ALPASS_CCSTRIP + float2( normal.x, 0 ) * 128 );
-				o.Albedo = o.Emission;
+				o.Emission = AudioLinkLerp( ALPASS_CCSTRIP + float2( normnorm.x * 128, 0 ) );
+				o.Albedo = diffuse;
 			}
 			else if( function.g > function.r && function.g > 0.5 )
 			{
 				// AudioLink, Scan
-				o.Emission = AudioLinkLerp( ALPASS_AUDIOLINK + float2( normal.x, 0 ) * 128 );
-				o.Albedo = o.Emission;
+				o.Emission = AudioLinkLerp( ALPASS_AUDIOLINK + float2( normnorm.x * 128, normnorm.y * 3.9 ) );
+				o.Albedo = diffuse;
 			}
 			
             // Metallic and smoothness come from slider variables
