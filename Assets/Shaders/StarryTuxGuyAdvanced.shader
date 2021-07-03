@@ -42,8 +42,8 @@
         }
 
 
-		Tags { "RenderType"="Opaque" }
-	   
+		Tags { "RenderQueue"="AlphaTest" "RenderType"="TransparentCutout" }
+		AlphaToMask On
 		
         LOD 200
 
