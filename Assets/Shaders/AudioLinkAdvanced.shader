@@ -101,12 +101,12 @@
                 int xoffset = 5;
                 bool leadingzero = false;
                 int points_after_decimal = 0; 
-                int max_decimals = 6;
+                int max_decimals = 5;
 
 				if( dig.x < cols - number_area_cols && dig.y < 8 )
 				{
 					uint sendchar = 0;
-					const uint sendarr[110] = { 
+					const uint sendarr[80] = { 
 						'I', 'n', 's', 't', 'a', 'n', 'c', 'e', ' ', ' ',
 						'W', 'a', 'l', 'l', 'c', 'l', 'o', 'c', 'k', ' ',
 						'N', 'e', 't', 'w', 'o', 'r', 'k', ' ', ' ', ' ',
@@ -114,17 +114,15 @@
 						'V', 'e', 'r', 's', 'i', 'o', 'n', ' ', ' ', ' ',
 						'R', 'M', 'S', ' ', 'v', 'a', 'l', 'u', 'e', ' ',
 						'F', 'P', 'S', ' ', 'T', '/', 'A', 'L', ' ', ' ',
-						'P', 'l', 'a', 'y', 'e', 'r', 'I', 'n', 'f', 'o',
-						'D', 'e', 'b', 'u', 'g', ' ', '1', ' ', ' ', ' ',
-						'D', 'e', 'b', 'u', 'g', ' ', '2', ' ', ' ', ' ',
-						'D', 'e', 'b', 'u', 'g', ' ', '3', ' ', ' ', ' '
+						'P', 'l', 'a', 'y', 'e', 'r', 'I', 'n', 'f', 'o'
 						};
 					sendchar = sendarr[dig.x+dig.y*10];
 					c += PrintChar( sendchar, fmxy, softness, 0.0 );
 				}
 				else
 				{
-                    dig.x -= cols - number_area_cols;
+					if( dig.y < 10 )
+						dig.x -= cols - number_area_cols;
 
 					switch( dig.y )
 					{
@@ -222,7 +220,30 @@
 					case 8:
 					case 9:
 					case 10:
-						value = AudioLinkData( int2( ALPASS_GENERALVU + int2(7, 0 ) ) )[dig.y-8];
+						if( dig.y < 10 )
+						{
+							value = AudioLinkData( int2( ALPASS_GENERALVU + int2(7, 0 ) ) )[dig.y-8];
+						}
+						else
+						{
+							float3 wp = mul( unity_ObjectToWorld, float4( 0., 0., 0., 1. ) );
+							if( dig.x < 6 )
+							{
+								value = wp.x;
+								xoffset = 6;
+							}
+							else if( dig.x < 14 )
+							{
+								value = wp.y;
+								xoffset = 14;
+							}
+							else
+							{
+								value = wp.z;
+								xoffset = 21;
+							}
+						}
+						
 						float4 amplitudemon = AudioLinkData( ALPASS_WAVEFORM + int2( iuv.x*128, 0 ) );
 						float2 uvin = ( iuv.xy*float2(1., 11./3.)-float2( 0., 8./3.) );
 						float r = amplitudemon.r + amplitudemon.a;
@@ -237,7 +258,7 @@
 						value = 99.99;
 						break;
 					}
-					float num = PrintNumberOnLine( value, fmxy, softness, points_after_decimal, xoffset - dig.x, max_decimals, leadingzero, 0 );
+					float num = PrintNumberOnLine( value, fmxy, softness, dig.x - xoffset, points_after_decimal, max_decimals, leadingzero, 0 );
 					c.rgb = lerp( c.rgb, 1.0, num );
 					c.a += num;
 				}
