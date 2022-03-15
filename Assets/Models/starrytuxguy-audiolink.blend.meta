@@ -1,171 +1,494 @@
 fileFormatVersion: 2
 guid: 584172c7fd73c7142863f1c40e1ba503
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: Chest
-    100004: CNLohr
-    100006: EyeBobble.Left
-    100008: EyeBobble.Left_end
-    100010: EyeBobble.Right
-    100012: EyeBobble.Right_end
-    100014: Head
-    100016: Hips
-    100018: Left Ankle
-    100020: Left Arm
-    100022: Left Elbow
-    100024: Left Index
-    100026: Left Index 2
-    100028: Left Index 3
-    100030: Left Index 3_end
-    100032: Left Knee
-    100034: Left Leg
-    100036: 'Left Middle '
-    100038: Left Middle 2
-    100040: Left Middle 3
-    100042: Left Middle 3_end
-    100044: 'Left Pinky '
-    100046: Left Pinky 2
-    100048: Left Pinky 3
-    100050: Left Pinky 3_end
-    100052: 'Left Ring '
-    100054: Left Ring 2
-    100056: Left Ring 3
-    100058: Left Ring 3_end
-    100060: Left Shoulder
-    100062: Left Thumb
-    100064: Left Thumb 2
-    100066: Left Thumb 3
-    100068: Left Thumb 3_end
-    100070: Left Toe
-    100072: Left Toe_end
-    100074: Left Wrist
-    100076: LEyeRoot
-    100078: Neck
-    100080: REyeRoot
-    100082: REyeRoot.003
-    100084: REyeRoot.003_end
-    100086: Right Ankle
-    100088: Right Arm
-    100090: Right Elbow
-    100092: Right Index
-    100094: Right Index 2
-    100096: Right Index 3
-    100098: Right Index 3_end
-    100100: Right Knee
-    100102: Right Leg
-    100104: 'Right Middle '
-    100106: Right Middle 2
-    100108: Right Middle 3
-    100110: Right Middle 3_end
-    100112: 'Right Pinky '
-    100114: Right Pinky 2
-    100116: Right Pinky 3
-    100118: Right Pinky 3_end
-    100120: 'Right Ring '
-    100122: Right Ring 2
-    100124: Right Ring 3
-    100126: Right Ring 3_end
-    100128: Right Shoulder
-    100130: Right Thumb
-    100132: Right Thumb 2
-    100134: Right Thumb 3
-    100136: Right Thumb 3_end
-    100138: Right Toe
-    100140: Right Toe_end
-    100142: Right Wrist
-    100144: Spine
-    100146: Spine 2
-    100148: //RootNode
-    400000: Armature
-    400002: Chest
-    400004: CNLohr
-    400006: EyeBobble.Left
-    400008: EyeBobble.Left_end
-    400010: EyeBobble.Right
-    400012: EyeBobble.Right_end
-    400014: Head
-    400016: Hips
-    400018: Left Ankle
-    400020: Left Arm
-    400022: Left Elbow
-    400024: Left Index
-    400026: Left Index 2
-    400028: Left Index 3
-    400030: Left Index 3_end
-    400032: Left Knee
-    400034: Left Leg
-    400036: 'Left Middle '
-    400038: Left Middle 2
-    400040: Left Middle 3
-    400042: Left Middle 3_end
-    400044: 'Left Pinky '
-    400046: Left Pinky 2
-    400048: Left Pinky 3
-    400050: Left Pinky 3_end
-    400052: 'Left Ring '
-    400054: Left Ring 2
-    400056: Left Ring 3
-    400058: Left Ring 3_end
-    400060: Left Shoulder
-    400062: Left Thumb
-    400064: Left Thumb 2
-    400066: Left Thumb 3
-    400068: Left Thumb 3_end
-    400070: Left Toe
-    400072: Left Toe_end
-    400074: Left Wrist
-    400076: LEyeRoot
-    400078: Neck
-    400080: REyeRoot
-    400082: REyeRoot.003
-    400084: REyeRoot.003_end
-    400086: Right Ankle
-    400088: Right Arm
-    400090: Right Elbow
-    400092: Right Index
-    400094: Right Index 2
-    400096: Right Index 3
-    400098: Right Index 3_end
-    400100: Right Knee
-    400102: Right Leg
-    400104: 'Right Middle '
-    400106: Right Middle 2
-    400108: Right Middle 3
-    400110: Right Middle 3_end
-    400112: 'Right Pinky '
-    400114: Right Pinky 2
-    400116: Right Pinky 3
-    400118: Right Pinky 3_end
-    400120: 'Right Ring '
-    400122: Right Ring 2
-    400124: Right Ring 3
-    400126: Right Ring 3_end
-    400128: Right Shoulder
-    400130: Right Thumb
-    400132: Right Thumb 2
-    400134: Right Thumb 3
-    400136: Right Thumb 3_end
-    400138: Right Toe
-    400140: Right Toe_end
-    400142: Right Wrist
-    400144: Spine
-    400146: Spine 2
-    400148: //RootNode
-    2100000: StaryGuyFabric
-    2100002: StaryGuySkin
-    2100004: StaryGuyShiny
-    2100006: Face
-    2100008: AdvancedShade
-    2100010: StarryTuxComposite
-    4300000: CNLohr
-    9500000: //RootNode
-    13700000: CNLohr
-    2186277476908879412: ImportLogs
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: Chest
+  - first:
+      1: 100004
+    second: CNLohr
+  - first:
+      1: 100006
+    second: EyeBobble.Left
+  - first:
+      1: 100008
+    second: EyeBobble.Left_end
+  - first:
+      1: 100010
+    second: EyeBobble.Right
+  - first:
+      1: 100012
+    second: EyeBobble.Right_end
+  - first:
+      1: 100014
+    second: Head
+  - first:
+      1: 100016
+    second: Hips
+  - first:
+      1: 100018
+    second: Left Ankle
+  - first:
+      1: 100020
+    second: Left Arm
+  - first:
+      1: 100022
+    second: Left Elbow
+  - first:
+      1: 100024
+    second: Left Index
+  - first:
+      1: 100026
+    second: Left Index 2
+  - first:
+      1: 100028
+    second: Left Index 3
+  - first:
+      1: 100030
+    second: Left Index 3_end
+  - first:
+      1: 100032
+    second: Left Knee
+  - first:
+      1: 100034
+    second: Left Leg
+  - first:
+      1: 100036
+    second: 'Left Middle '
+  - first:
+      1: 100038
+    second: Left Middle 2
+  - first:
+      1: 100040
+    second: Left Middle 3
+  - first:
+      1: 100042
+    second: Left Middle 3_end
+  - first:
+      1: 100044
+    second: 'Left Pinky '
+  - first:
+      1: 100046
+    second: Left Pinky 2
+  - first:
+      1: 100048
+    second: Left Pinky 3
+  - first:
+      1: 100050
+    second: Left Pinky 3_end
+  - first:
+      1: 100052
+    second: 'Left Ring '
+  - first:
+      1: 100054
+    second: Left Ring 2
+  - first:
+      1: 100056
+    second: Left Ring 3
+  - first:
+      1: 100058
+    second: Left Ring 3_end
+  - first:
+      1: 100060
+    second: Left Shoulder
+  - first:
+      1: 100062
+    second: Left Thumb
+  - first:
+      1: 100064
+    second: Left Thumb 2
+  - first:
+      1: 100066
+    second: Left Thumb 3
+  - first:
+      1: 100068
+    second: Left Thumb 3_end
+  - first:
+      1: 100070
+    second: Left Toe
+  - first:
+      1: 100072
+    second: Left Toe_end
+  - first:
+      1: 100074
+    second: Left Wrist
+  - first:
+      1: 100076
+    second: LEyeRoot
+  - first:
+      1: 100078
+    second: Neck
+  - first:
+      1: 100080
+    second: REyeRoot
+  - first:
+      1: 100082
+    second: REyeRoot.003
+  - first:
+      1: 100084
+    second: REyeRoot.003_end
+  - first:
+      1: 100086
+    second: Right Ankle
+  - first:
+      1: 100088
+    second: Right Arm
+  - first:
+      1: 100090
+    second: Right Elbow
+  - first:
+      1: 100092
+    second: Right Index
+  - first:
+      1: 100094
+    second: Right Index 2
+  - first:
+      1: 100096
+    second: Right Index 3
+  - first:
+      1: 100098
+    second: Right Index 3_end
+  - first:
+      1: 100100
+    second: Right Knee
+  - first:
+      1: 100102
+    second: Right Leg
+  - first:
+      1: 100104
+    second: 'Right Middle '
+  - first:
+      1: 100106
+    second: Right Middle 2
+  - first:
+      1: 100108
+    second: Right Middle 3
+  - first:
+      1: 100110
+    second: Right Middle 3_end
+  - first:
+      1: 100112
+    second: 'Right Pinky '
+  - first:
+      1: 100114
+    second: Right Pinky 2
+  - first:
+      1: 100116
+    second: Right Pinky 3
+  - first:
+      1: 100118
+    second: Right Pinky 3_end
+  - first:
+      1: 100120
+    second: 'Right Ring '
+  - first:
+      1: 100122
+    second: Right Ring 2
+  - first:
+      1: 100124
+    second: Right Ring 3
+  - first:
+      1: 100126
+    second: Right Ring 3_end
+  - first:
+      1: 100128
+    second: Right Shoulder
+  - first:
+      1: 100130
+    second: Right Thumb
+  - first:
+      1: 100132
+    second: Right Thumb 2
+  - first:
+      1: 100134
+    second: Right Thumb 3
+  - first:
+      1: 100136
+    second: Right Thumb 3_end
+  - first:
+      1: 100138
+    second: Right Toe
+  - first:
+      1: 100140
+    second: Right Toe_end
+  - first:
+      1: 100142
+    second: Right Wrist
+  - first:
+      1: 100144
+    second: Spine
+  - first:
+      1: 100146
+    second: Spine 2
+  - first:
+      1: 100148
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: Chest
+  - first:
+      4: 400004
+    second: CNLohr
+  - first:
+      4: 400006
+    second: EyeBobble.Left
+  - first:
+      4: 400008
+    second: EyeBobble.Left_end
+  - first:
+      4: 400010
+    second: EyeBobble.Right
+  - first:
+      4: 400012
+    second: EyeBobble.Right_end
+  - first:
+      4: 400014
+    second: Head
+  - first:
+      4: 400016
+    second: Hips
+  - first:
+      4: 400018
+    second: Left Ankle
+  - first:
+      4: 400020
+    second: Left Arm
+  - first:
+      4: 400022
+    second: Left Elbow
+  - first:
+      4: 400024
+    second: Left Index
+  - first:
+      4: 400026
+    second: Left Index 2
+  - first:
+      4: 400028
+    second: Left Index 3
+  - first:
+      4: 400030
+    second: Left Index 3_end
+  - first:
+      4: 400032
+    second: Left Knee
+  - first:
+      4: 400034
+    second: Left Leg
+  - first:
+      4: 400036
+    second: 'Left Middle '
+  - first:
+      4: 400038
+    second: Left Middle 2
+  - first:
+      4: 400040
+    second: Left Middle 3
+  - first:
+      4: 400042
+    second: Left Middle 3_end
+  - first:
+      4: 400044
+    second: 'Left Pinky '
+  - first:
+      4: 400046
+    second: Left Pinky 2
+  - first:
+      4: 400048
+    second: Left Pinky 3
+  - first:
+      4: 400050
+    second: Left Pinky 3_end
+  - first:
+      4: 400052
+    second: 'Left Ring '
+  - first:
+      4: 400054
+    second: Left Ring 2
+  - first:
+      4: 400056
+    second: Left Ring 3
+  - first:
+      4: 400058
+    second: Left Ring 3_end
+  - first:
+      4: 400060
+    second: Left Shoulder
+  - first:
+      4: 400062
+    second: Left Thumb
+  - first:
+      4: 400064
+    second: Left Thumb 2
+  - first:
+      4: 400066
+    second: Left Thumb 3
+  - first:
+      4: 400068
+    second: Left Thumb 3_end
+  - first:
+      4: 400070
+    second: Left Toe
+  - first:
+      4: 400072
+    second: Left Toe_end
+  - first:
+      4: 400074
+    second: Left Wrist
+  - first:
+      4: 400076
+    second: LEyeRoot
+  - first:
+      4: 400078
+    second: Neck
+  - first:
+      4: 400080
+    second: REyeRoot
+  - first:
+      4: 400082
+    second: REyeRoot.003
+  - first:
+      4: 400084
+    second: REyeRoot.003_end
+  - first:
+      4: 400086
+    second: Right Ankle
+  - first:
+      4: 400088
+    second: Right Arm
+  - first:
+      4: 400090
+    second: Right Elbow
+  - first:
+      4: 400092
+    second: Right Index
+  - first:
+      4: 400094
+    second: Right Index 2
+  - first:
+      4: 400096
+    second: Right Index 3
+  - first:
+      4: 400098
+    second: Right Index 3_end
+  - first:
+      4: 400100
+    second: Right Knee
+  - first:
+      4: 400102
+    second: Right Leg
+  - first:
+      4: 400104
+    second: 'Right Middle '
+  - first:
+      4: 400106
+    second: Right Middle 2
+  - first:
+      4: 400108
+    second: Right Middle 3
+  - first:
+      4: 400110
+    second: Right Middle 3_end
+  - first:
+      4: 400112
+    second: 'Right Pinky '
+  - first:
+      4: 400114
+    second: Right Pinky 2
+  - first:
+      4: 400116
+    second: Right Pinky 3
+  - first:
+      4: 400118
+    second: Right Pinky 3_end
+  - first:
+      4: 400120
+    second: 'Right Ring '
+  - first:
+      4: 400122
+    second: Right Ring 2
+  - first:
+      4: 400124
+    second: Right Ring 3
+  - first:
+      4: 400126
+    second: Right Ring 3_end
+  - first:
+      4: 400128
+    second: Right Shoulder
+  - first:
+      4: 400130
+    second: Right Thumb
+  - first:
+      4: 400132
+    second: Right Thumb 2
+  - first:
+      4: 400134
+    second: Right Thumb 3
+  - first:
+      4: 400136
+    second: Right Thumb 3_end
+  - first:
+      4: 400138
+    second: Right Toe
+  - first:
+      4: 400140
+    second: Right Toe_end
+  - first:
+      4: 400142
+    second: Right Wrist
+  - first:
+      4: 400144
+    second: Spine
+  - first:
+      4: 400146
+    second: Spine 2
+  - first:
+      4: 400148
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: StaryGuyFabric
+  - first:
+      21: 2100002
+    second: StaryGuySkin
+  - first:
+      21: 2100004
+    second: StaryGuyShiny
+  - first:
+      21: 2100006
+    second: Face
+  - first:
+      21: 2100008
+    second: AdvancedShade
+  - first:
+      21: 2100010
+    second: StarryTuxComposite
+  - first:
+      43: 4300000
+    second: CNLohr
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: CNLohr
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -198,25 +521,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.5
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -225,10 +551,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Hips
       humanName: Hips
@@ -1045,13 +1371,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

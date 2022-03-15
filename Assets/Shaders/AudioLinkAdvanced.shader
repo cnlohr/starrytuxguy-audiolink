@@ -6,6 +6,19 @@
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
 		_MainTex ("Normal", 2D) = "white" {}
+
+		_EnableOSCEyes( "Enable OSC Eyes", float ) = 0
+		_EyeLXP( "EyeLXP", float ) = 0
+		_EyeLXM( "EyeLXM", float ) = 0
+		_EyeLYP( "EyeLYP", float ) = 0
+		_EyeLYM( "EyeLYM", float ) = 0
+		_EyeRXP( "EyeRXP", float ) = 0
+		_EyeRXM( "EyeRXM", float ) = 0
+		_EyeRYP( "EyeRYP", float ) = 0
+		_EyeRYM( "EyeRYM", float ) = 0
+
+		_LeftEyeLid( "Left Eye Lid", float ) = 0
+		_RightEyeLid( "Right Eye Lid", float ) = 0
     }
     SubShader
     {
@@ -66,6 +79,18 @@
         half _Metallic;
         fixed4 _Color;
 
+		float _EnableOSCEyes;
+		float _EyeLXP;
+		float _EyeLXM;
+		float _EyeLYP;
+		float _EyeLYM;
+		float _EyeRXP;
+		float _EyeRXM;
+		float _EyeRYP;
+		float _EyeRYM;
+		float _LeftEyeLid;
+		float _RightEyeLid;
+
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
         // #pragma instancing_options assumeuniformscaling
@@ -81,7 +106,7 @@
                 
                 float2 iuv =  IN.uv_MainTex;
                 iuv.y = 1.-iuv.y;
-                const uint rows = 11;
+                const uint rows = 13;
                 const uint cols = 21;
                 const uint number_area_cols = 11;
                 
@@ -245,7 +270,7 @@
 						}
 						
 						float4 amplitudemon = AudioLinkData( ALPASS_WAVEFORM + int2( iuv.x*128, 0 ) );
-						float2 uvin = ( iuv.xy*float2(1., 11./3.)-float2( 0., 8./3.) );
+						float2 uvin = ( iuv.xy*float2(1., 11./3.)-float2( 0., 6./3.) );
 						float r = amplitudemon.r + amplitudemon.a;
 						float l = amplitudemon.r - amplitudemon.a;
 						float comp = uvin.y * 2. - 1.;
@@ -253,6 +278,47 @@
 						float lamp = saturate( (.05 - abs( l - comp )) * 40. );
 						c.xyz += float3( 1., 0.2, 0.2 ) * ramp + float3( .2, .2, 1. ) * lamp;
 						c.a = saturate(ramp + lamp);
+						break;
+					case 11:
+					case 12:
+						if( _EnableOSCEyes < 0.5 )
+						{
+							xoffset = 100;
+						}
+						else
+						{
+							if( dig.x < 1 )
+							{
+								xoffset = 1;
+								value = (dig.y<12)?_LeftEyeLid:_LeftEyeLid + 0.5;
+							}
+							else if( dig.x < 4 )
+							{
+								xoffset = 4;
+								value = ((dig.y<12)?_EyeLXP:_EyeRXP)*100;
+							}
+							else if( dig.x < 7 )
+							{
+								xoffset = 7;
+								value = ((dig.y<12)?_EyeLXM:_EyeRXM)*100;
+							}
+							else if( dig.x < 10 )
+							{
+								xoffset = 10;
+								value = ((dig.y<12)?_EyeLYP:_EyeRYP)*100;
+							}
+							else if( dig.x < 13 )
+							{
+								xoffset = 13;
+								value = ((dig.y<12)?_EyeLYM:_EyeRYM)*100;
+							}
+							else
+							{
+								xoffset = 22;
+								// The last section.
+							}
+
+						}
 						break;
 					default:
 						value = 99.99;
